@@ -84,3 +84,5 @@ gem "friendly_id", "~> 5.4"
 gem "letter_opener", "~> 1.7", :group => :development
 # send contact form
 gem "mail_form", "~> 1.9"
+# use amazon s3 for images on heroku (production)
+gem 'aws-sdk-s3', require: false
