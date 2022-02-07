@@ -1,5 +1,5 @@
 <h6><b>Fill the form below:-</b></h6>
-<%= form_for @contact do |f| %>
+<%= form_for @contact, local: true, data: { turbo: false } do |f| %>
 
   <% if @contact.errors.any? %>
     <div id="error_explanation">

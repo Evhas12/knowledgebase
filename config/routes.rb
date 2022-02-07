@@ -13,6 +13,5 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   get 'manage', to: 'questions#index'
   get 'contact', to: 'home#contact'
-  # get 'autocomplete', to: 'home#autocomplete'
   root 'home#index'
 end

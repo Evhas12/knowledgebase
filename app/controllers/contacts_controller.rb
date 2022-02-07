@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+
+  layout 'home'
+  
   def new
     @contact = Contact.new
   end
@@ -11,7 +14,7 @@ class ContactsController < ApplicationController
       redirect_to root_path, notice: 'Thank you for your message'
     else
       flash.now[:error] = 'Cannot send message'
-      render contact_path
+      render template: 'contacts/create'
     end
 
   end

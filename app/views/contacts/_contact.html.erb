@@ -18,12 +18,6 @@
 
       <div class="col-lg-8 me-auto">
 
-        <!-- 
-          <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
-            <input type="text" class="form-control" data-autocomplete-target="input" placeholder="Type to search ..." required />
-            <ul data-autocomplete-target="results"></ul>
-          </div> 
-        -->
         <%= form_with url: search_questions_path, method: :post, data: { controller: 'debounce', debounce_target: 'form' } do |form| %>
           <p class="fs-5 fw-bold">Let us find your question or topic in our current knowledge base</p>
           <%= form.search_field :topic_search, value: params[:topic_search], data: { action: "input->debounce#search" }, placeholder: "Type your topic ...", class: "form-control form-control-lg" %>
