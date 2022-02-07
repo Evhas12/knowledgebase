@@ -1,0 +1,44 @@
+<section>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="col-lg-12 mb-5">
+        <h1>Contact Us</h1>
+        <hr>
+      </div>
+
+      <div class="col-lg-8 me-auto">
+
+        <%= form_with url: search_questions_path, method: :post, data: { controller: 'debounce', debounce_target: 'form' } do |form| %>
+          <p class="fs-5 fw-bold">Let us find your question or topic in our current knowledge base</p>
+          <%= form.search_field :topic_search, value: params[:topic_search], data: { action: "input->debounce#search" }, placeholder: "Type your topic ...", class: "form-control form-control-lg" %>
+        <% end %>
+
+        <div class="mt-4 mb-4">
+          <p class="fs-6 fw-bold text-danger">And, if you still haven't found the answer then you can always reach us by submitting the form below:-</p>
+        </div>
+
+        <hr>
+
+        <div class="">
+          <%= render 'contacts/form' %>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 ms-auto">
+        <div id="search_results"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

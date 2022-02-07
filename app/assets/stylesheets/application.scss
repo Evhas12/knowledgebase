@@ -1,0 +1,33 @@
+@import 'bootstrap';
+@import 'actiontext.css';
+@import 'scaffold.scss';
+
+footer {
+  padding: 45px 0px;
+}
+
+nav {
+  margin-bottom: 45px;
+}
+
+#paginator nav {
+  margin-bottom: 0px !important;
+}
+
+#home-content a,
+#category-page a {
+  text-decoration: none;
+}
+
+#home-content a:hover,
+#category-page a:hover {
+  border-bottom: 1px solid $primary;
+}
+
+#home-content h3.card-title a {
+  color: $secondary !important;
+}
+
+#home-content h3.card-title a:hover {
+  border-bottom: 1px solid $secondary !important;
+}

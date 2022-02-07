@@ -1,0 +1,5 @@
+<%= form_with url: search_questions_path, method: :post, data: { controller: 'debounce', debounce_target: 'form' } do |form| %>
+  <%= form.search_field :topic_search, value: params[:topic_search], data: { action: "input->debounce#search" }, placeholder: "Search Here", class: "form-control form-control-lg" %>
+<% end %>
+
+<div id="search_results" class="bg-light text-dark border border-gray-300 rounded" style="z-index: 10; position: absolute;"></div>

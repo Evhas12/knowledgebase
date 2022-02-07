@@ -1,0 +1,14 @@
+<% if path.include?('contact') && !questions.empty? %>
+  <h6>Do any of these topics answer your query?</h6>
+  <hr>
+<% end %>
+
+<% questions.each do |question| %>
+  <div class="px-2 py-1">
+    <p>
+      <%= link_to question do %>
+        <%= highlight(question.topic, params.dig(:topic_search)) %>
+      <% end %>
+    </p>
+  </div>
+<% end %>

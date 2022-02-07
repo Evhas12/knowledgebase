@@ -1,0 +1,38 @@
+<h6><b>Fill the form below:-</b></h6>
+<%= form_for @contact do |f| %>
+
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-12">
+    <div class="mt-4">
+      <%= f.label :topic, "Question or Topic", class: "form-label" %>
+      <%= f.text_field  :topic, required: true, class: "form-control" %>
+    </div>
+    <div class="mt-4">
+      <%= f.label :name, class: "form-label" %>
+      <%= f.text_field  :name, required: true, class: "form-control" %>
+    </div>
+    <div class="mt-4">
+      <%= f.label :email, class: "form-label" %>
+      <%= f.text_field  :email, required: true, class: "form-control" %>
+    </div>
+    <div class="mt-4">
+      <%= f.label :message, class: "form-label" %>
+      <%= f.text_area  :message, rows: 8, cols: 40, required: true, class: "form-control", placeholder: "Send me a message" %>
+    </div>
+    <div class= "d-none">
+      <%= f.label :nickname %>
+      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <%= f.submit 'Send message', class: 'btn btn-primary mt-4' %>
+  </div>
+<% end %>

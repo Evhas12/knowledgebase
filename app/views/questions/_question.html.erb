@@ -1,0 +1,27 @@
+<div id="<%= dom_id question %>">
+  <p>
+    <strong>Topic:</strong>
+    <%= question.topic %>
+  </p>
+
+  <p>
+    <strong>Slug:</strong>
+    <%= question.slug %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= link_to question.category.title, category_path(question.category) %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= question.user.email %>
+  </p>
+
+  <p>
+    <strong>Answer:</strong>
+    <%= question.answer %>
+  </p>
+
+</div>
