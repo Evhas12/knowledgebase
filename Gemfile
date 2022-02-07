@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -85,4 +85,5 @@ gem "letter_opener", "~> 1.7", :group => :development
 # send contact form
 gem "mail_form", "~> 1.9"
 # use amazon s3 for images on heroku (production)
-gem 'aws-sdk-s3', require: false
+# gem 'aws-sdk-s3', require: false
+gem "aws-sdk-s3", "~> 1.112"
