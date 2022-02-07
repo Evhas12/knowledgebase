@@ -14,20 +14,20 @@
 
   <div class="col-md-12">
     <div class="mt-4">
-      <%= f.label :topic, "Question or Topic", class: "form-label" %>
-      <%= f.text_field  :topic, required: true, class: "form-control" %>
+      <%= f.label :topic, "Question or Topic *", class: "form-label" %>
+      <%= f.text_field  :topic, class: "form-control" %>
     </div>
     <div class="mt-4">
-      <%= f.label :name, class: "form-label" %>
-      <%= f.text_field  :name, required: true, class: "form-control" %>
+      <%= f.label :name, "Name *", class: "form-label" %>
+      <%= f.text_field  :name, class: "form-control" %>
     </div>
     <div class="mt-4">
-      <%= f.label :email, class: "form-label" %>
-      <%= f.text_field  :email, required: true, class: "form-control" %>
+      <%= f.label :email, "Email Address *", class: "form-label" %>
+      <%= f.text_field  :email, class: "form-control" %>
     </div>
     <div class="mt-4">
-      <%= f.label :message, class: "form-label" %>
-      <%= f.text_area  :message, rows: 8, cols: 40, required: true, class: "form-control", placeholder: "Send me a message" %>
+      <%= f.label :message, "Message *", class: "form-label" %>
+      <%= f.text_area  :message, rows: 8, cols: 40, class: "form-control", placeholder: "Send me a message" %>
     </div>
     <div class= "d-none">
       <%= f.label :nickname %>

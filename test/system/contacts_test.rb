@@ -39,4 +39,13 @@ class ContactsTest < ApplicationSystemTestCase
      assert_text "Email can't be blank"
    end
 
+   test "does not deliver a message with a missing message" do
+    visit new_contact_url
+    fill_in 'Topic', :with => 'This is a new Topic by Chetan Mittal'
+    fill_in 'Name', :with => 'Chetan Mittal'
+    fill_in 'Email', :with => 'chetanmittal@opensourceknowledgebaseapp.dev'
+    click_button 'Send message'
+    assert_text "Message can't be blank"
+  end
+
  end

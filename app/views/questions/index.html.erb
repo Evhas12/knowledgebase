@@ -23,7 +23,7 @@
                 <td><%= question.topic %></td>
                 <td><%= question.slug %></td>
                 <td><%= link_to question.category.title, category_path(question.category) %></td>
-                <td><%= question.created_at.to_s(:long_ordinal) %></td>
+                <td><%= question.created_at.to_formatted_s(:long_ordinal) %></td>
                 <td><%= link_to "View", question %></td>
                 <td><%= link_to "Edit", edit_question_path(question) %></td>
               </tr>
