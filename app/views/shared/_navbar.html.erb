@@ -7,12 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <% if user_signed_in? %>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <%= link_to "Categories", categories_path, class: "nav-item nav-link" %>
-          <%= link_to "Questions", questions_path, class: "nav-item nav-link" %>
+          <%= link_to "Categories", categories_path, class: "nav-item nav-link #{active_class(categories_path)}" %>
+          <%= link_to "Questions", questions_path, class: "nav-item nav-link #{active_class(questions_path)}" %>
         </ul>
       <% end %>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <%= link_to "Contact", contact_path, class: "nav-item nav-link" %>
+        <%= link_to "Contact", contact_path, class: "nav-item nav-link #{active_class(new_contact_path)}" %>
         <% if user_signed_in? %>
           <%= link_to current_user.email, edit_user_registration_path, class: "nav-item nav-link" %>
           <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-danger text-light nav-item nav-link" %>

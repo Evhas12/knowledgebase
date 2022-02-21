@@ -11,4 +11,8 @@ module ApplicationHelper
     bootstrap_alert_class[level]
   end
 
+  def active_class(link_path)
+    (current_page?(link_path) or request.path.include?(link_path)) ? 'active' : ""
+  end
+
 end

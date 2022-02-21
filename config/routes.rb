@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
   end
   resources :contacts, only: [:new, :create]
+  resource :embed, only: :update
   get 'manage', to: 'questions#index'
   get 'contact', to: 'home#contact'
   root 'home#index'

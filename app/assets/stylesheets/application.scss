@@ -31,3 +31,96 @@ nav {
 #home-content h3.card-title a:hover {
   border-bottom: 1px solid $secondary !important;
 }
+
+legend {
+  border-bottom: 1px solid #dee2e6;
+}
+
+trix-editor.form-control {
+  max-height: 450px !important;
+  overflow-y: auto;
+}
+
+.trix-content pre {
+  background-color: #fff;
+}
+
+trix-toolbar {
+
+  .trix-button-row {
+    overflow-x:visible;
+    position: relative;
+    z-index: 9999;
+}
+
+  button.highlight {
+    font-size: 16px;
+    vertical-align: bottom;
+    background-color: yellow;
+  }
+
+  button.underline {
+    font-size: 16px;
+    vertical-align: bottom;
+    text-decoration: underline;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+   }
+   
+   .dropdown {
+     position: relative;
+   }
+   
+   .menu {
+     position: absolute;
+     top: 100%;
+     left: auto;
+     right: 50%;
+     transform: translateX(50%);
+     background: white;
+   }
+   
+   .button {
+     display: flex;
+     border-left: 1px solid #ccc;
+     border-bottom: 1px solid #ddd;
+     display: flex;
+     height: 100%;
+     align-items: center;
+     justify-content: center;
+     font-size: 15px;
+     width: 1.8em;
+     cursor: pointer;
+   }
+   
+   .colors {
+     display: grid;
+     grid-template-columns: repeat(3, 27px);
+     overflow: hidden;
+     max-height: none !important;
+     height: auto !important;
+   }
+   
+   .colors__item {
+     border: none !important;
+     color: white !important;
+     font-weight: bolder;
+     font-size: 16px;
+     background-color: #fff;
+   }
+   
+   .colors__item--red {
+     color: red !important;
+   }
+   
+   .colors__item--blue {
+     color: blue !important;
+   }
+   
+   .colors__item--green {
+     color: green !important;
+   }
+
+}

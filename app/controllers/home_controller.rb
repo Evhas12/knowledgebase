@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  layout 'home'
+  # layout 'home'
   
   def index
     @categories = Category.includes(:questions).where.not(questions: { category_id: nil })

@@ -12,24 +12,24 @@
   <% end %>
 
   <div>
-    <%= form.label :topic, style: "display: block" %>
-    <%= form.text_field :topic %>
+    <%= form.label :topic, style: "display: block", class: "form-label" %>
+    <%= form.text_field :topic, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :slug, style: "display: block" %>
-    <%= form.text_field :slug %>
+    <%= form.label :slug, style: "display: block", class: "form-label" %>
+    <%= form.text_field :slug, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :category_id, style: "display: block" %>
+    <%= form.label :category_id, style: "display: block", class: "form-label" %>
     <%#= form.text_field :category_id %>
     <%= form.select :category_id, Category.all.map {|ct| [ct.title, ct.id]}, { prompt: "Select a Category" }, { class: 'form-select' } %>
   </div>
 
   <div>
-    <%= form.label :answer, style: "display: block" %>
-    <%= form.rich_text_area :answer %>
+    <%= form.label :answer, style: "display: block", class: "form-label" %>
+    <%= form.rich_text_area :answer, data: { controller: "trix-youtube-plugin" }, class: "form-control" %>
   </div>
 
   <div>

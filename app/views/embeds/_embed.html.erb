@@ -1,0 +1,11 @@
+<%= content_tag :div, class: "row" do -%>
+  <%= content_tag :div, class: "col-lg-12 d-block" do -%>
+    <%= tag.center do -%>
+      <%= content_tag :div, class: "col-lg-8" do -%>
+        <%= content_tag :div, class: "my-4 ratio ratio-16x9" do -%>
+          <%= content_tag :iframe, nil, src: embed.source %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

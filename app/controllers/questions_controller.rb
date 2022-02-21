@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1 or /questions/1.json
   def show
-    render layout: 'home'
+    # render layout: 'home'
   end
 
   # GET /questions/new

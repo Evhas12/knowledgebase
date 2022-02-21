@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    render layout: 'home'
+    # render layout: 'home'
   end
 
   # GET /categories/new
