@@ -12,3 +12,6 @@ eagerLoadControllersFrom("controllers", application)
 
 // import TrixYoutubePluginController from "./trix_youtube_plugin_controller.js"
 // application.register("trix-youtube-plugin", TrixYoutubePluginController)
+
+// import NewTabController from "./new_tab_controller"
+// application.register("new-tab", NewTabController)
