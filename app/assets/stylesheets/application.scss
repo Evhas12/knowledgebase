@@ -124,3 +124,12 @@ trix-toolbar {
    }
 
 }
+
+.attachment-download a:hover {
+  text-decoration: underline !important;
+}
+
+.trix-content action-text-attachment .attachment {
+  max-width: 69% !important;
+  border: none !important;
+}

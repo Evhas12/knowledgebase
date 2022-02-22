@@ -1,5 +1,22 @@
-<figure class="attachment attachment--<%= blob.representable? ? "preview" : "file" %> attachment--<%= blob.filename.extension %>">
-  <% if blob.representable? %>
+<center>
+<figure class="attachment attachment--<%= blob.representable? ? "preview" : "file" %> attachment--<%= blob.filename.extension %> my-4">
+  
+  <% if blob.video? %>
+    <video
+      controls="false"
+      width="100%"
+      poster=<%= polymorphic_url(blob.representation(resize_to_limit: [ 1024, 768 ])) if blob.representable? %>
+    >
+      <source src= <%= rails_blob_url(blob) %>, type=<%= blob.content_type %> >
+    </video>
+  <% elsif blob.audio? %>
+    <audio controls="true" width="100%" preload="metadata">
+      <source src= <%= rails_blob_url(blob) %>, type=<%= blob.content_type %> >
+    </audio>
+  <% elsif blob.content_type == 'application/pdf' %>
+    <embed src=<%= rails_blob_url(blob) %> width="800" height="500"
+           type="application/pdf">
+  <% elsif blob.representable? %>
     <%= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]) %>
   <% end %>
 
@@ -7,8 +24,15 @@
     <% if caption = blob.try(:caption) %>
       <%= caption %>
     <% else %>
-      <span class="attachment__name"><%= blob.filename %></span>
-      <span class="attachment__size"><%= number_to_human_size blob.byte_size %></span>
+      <!-- 
+      <span class="attachment__name"><%#= blob.filename %></span>
+      <span class="attachment__size"><%#= number_to_human_size blob.byte_size %></span> 
+      -->
     <% end %>
+    <p class="mt-2 mb-4 attachment-download" style="font-size:10px;">
+      <%= link_to "Download", rails_blob_path(blob, disposition: "attachment"), class: "fst-italic text-primary" %>
+    </p>
   </figcaption>
+
 </figure>
+</center>
