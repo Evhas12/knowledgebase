@@ -130,6 +130,46 @@ trix-toolbar {
 }
 
 .trix-content action-text-attachment .attachment--file {
-  max-width: 69% !important;
   border: none !important;
+  max-width: 69% !important;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .trix-content action-text-attachment .attachment--file {
+    max-width: 100% !important;
+  }
+  .trix-content action-text-attachment .attachment--pdf iframe {
+    height: 180px !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .trix-content action-text-attachment .attachment--file {
+    max-width: 100% !important;
+  }
+  .trix-content action-text-attachment .attachment--pdf iframe {
+    height: 180px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .trix-content action-text-attachment .attachment--file {
+    max-width: 100% !important;
+  }
+  .trix-content action-text-attachment .attachment--pdf iframe {
+    height: 180px !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .trix-content action-text-attachment .attachment--file {
+    max-width: 69% !important;
+  }
+  .trix-content action-text-attachment .attachment--pdf iframe {
+    height: 600px !important;
+  }
+}
+@media (min-width: 1201px) {
+  .trix-content action-text-attachment .attachment--file {
+    max-width: 69% !important;
+  }
+  .trix-content action-text-attachment .attachment--pdf iframe {
+    height: 600px !important;
+  }
 }
