@@ -155,6 +155,7 @@ trix-toolbar {
   }
   .trix-content action-text-attachment .attachment--pdf iframe {
     height: 180px !important;
+    width: 800px !important;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -163,6 +164,7 @@ trix-toolbar {
   }
   .trix-content action-text-attachment .attachment--pdf iframe {
     height: 600px !important;
+    width: 800px !important;
   }
 }
 @media (min-width: 1201px) {
@@ -171,5 +173,6 @@ trix-toolbar {
   }
   .trix-content action-text-attachment .attachment--pdf iframe {
     height: 600px !important;
+    width: 800px !important;
   }
 }
