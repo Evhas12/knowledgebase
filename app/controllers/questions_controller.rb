@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions or /questions.json
   def index
-    @questions = Question.page params[:page]
+    @questions = Question.order(created_at: :desc).page params[:page]
   end
 
   def search
