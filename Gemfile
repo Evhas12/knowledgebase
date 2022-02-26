@@ -87,3 +87,5 @@ gem "mail_form", "~> 1.9"
 # use amazon s3 for images on heroku (production)
 # gem 'aws-sdk-s3', require: false
 gem "aws-sdk-s3", "~> 1.112"
+
+gem "rubocop", "~> 1.25"
