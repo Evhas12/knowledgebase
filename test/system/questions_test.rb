@@ -49,6 +49,7 @@ class QuestionsTest < ApplicationSystemTestCase
     sign_in users(:one)
     visit question_url(@question)
     click_on "Destroy this question", match: :first
+    accept_confirm
 
     assert_text "Question was successfully destroyed"
   end

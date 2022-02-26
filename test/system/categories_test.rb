@@ -43,6 +43,7 @@ class CategoriesTest < ApplicationSystemTestCase
     sign_in users(:one)
     visit category_url(@category)
     click_on "Destroy this category", match: :first
+    accept_confirm
 
     assert_text "Category was successfully destroyed"
   end
