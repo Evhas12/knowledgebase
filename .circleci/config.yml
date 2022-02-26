@@ -45,7 +45,7 @@ jobs:
           command: RAILS_ENV=test bundle exec rails test:all
       - store_test_results:
           path: test/reports
-      - ruby/rubocop-check
+      # - ruby/rubocop-check
 
 workflows:
   version: 2
