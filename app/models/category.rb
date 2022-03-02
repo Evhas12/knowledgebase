@@ -3,8 +3,8 @@
 # Table name: categories
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)
-#  slug       :string(255)
+#  title      :string
+#  slug       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

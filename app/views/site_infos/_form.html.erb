@@ -1,0 +1,57 @@
+<%= form_with(model: site_info) do |form| %>
+  <% if site_info.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(site_info.errors.count, "error") %> prohibited this site_info from being saved:</h2>
+
+      <ul>
+        <% site_info.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :brand_name, style: "display: block", class: "form-label" %>
+    <%= form.text_field :brand_name, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :seo_title, style: "display: block", class: "form-label" %>
+    <%= form.text_field :seo_title, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :seo_description, style: "display: block", class: "form-label" %>
+    <%= form.text_area :seo_description, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :header_scripts, style: "display: block", class: "form-label" %>
+    <%= form.text_area :header_scripts, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :footer_scripts, style: "display: block", class: "form-label" %>
+    <%= form.text_area :footer_scripts, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :facebook_url, style: "display: block", class: "form-label" %>
+    <%= form.text_field :facebook_url, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :github_url, style: "display: block", class: "form-label" %>
+    <%= form.text_field :github_url, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :twitter_url, style: "display: block", class: "form-label" %>
+    <%= form.text_field :twitter_url, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-success mt-4" %>
+  </div>
+<% end %>

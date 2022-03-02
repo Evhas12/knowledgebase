@@ -1,0 +1,37 @@
+<section class="text-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Site Infos</h1>
+
+        <table class="table text-secondary">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Brand Name</th>
+              <th scope="col">SEO Title</th>
+              <th scope="col">SEO Description</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+             <% @site_infos.each do |site_info| %>
+              <tr>
+                <th scope="row"><%= site_info.id %></th>
+                <td><%= site_info.brand_name %></td>
+                <td><%= site_info.seo_title %></td>
+                <td><%= link_to site_info.seo_description %></td>
+                <td><%= link_to "View", site_info %></td>
+                <td><%= link_to "Edit", edit_site_info_path(site_info) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= link_to "New Site Info", new_site_info_path, class: "btn btn-success mt-4" %>
+
+      </div>
+    </div>
+  </div>
+</section>

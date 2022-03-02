@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @site_info %>
+
+<div>
+  <%= link_to "Edit this site info", edit_site_info_path(@site_info) %> |
+  <%= link_to "Back to site infos", site_infos_path %>
+
+  <%= button_to "Destroy this site info", @site_info, form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete, class: "btn btn-danger mt-4" %>
+</div>

@@ -3,8 +3,8 @@
 # Table name: questions
 #
 #  id          :integer          not null, primary key
-#  topic       :string(255)
-#  slug        :string(255)
+#  topic       :string
+#  slug        :string
 #  category_id :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
