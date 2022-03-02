@@ -54,9 +54,9 @@ class SiteInfosTest < ApplicationSystemTestCase
   test "should destroy Site info" do
     sign_in users(:one)
     visit site_info_url(@site_info)
-    # click_on "Destroy this site info", match: :first
-    # accept_confirm
+    click_on "Destroy this site info", match: :first
+    accept_confirm
 
-    # assert_text "Site info was successfully destroyed"
+    assert_text "Site info was successfully destroyed"
   end
 end
