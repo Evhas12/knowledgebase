@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/cmittal79dev/knowledgebasehub/tree/main.svg?style=shield)](https://circleci.com/gh/cmittal79dev/knowledgebasehub/tree/main)
+[![CircleCI](https://circleci.com/gh/cmittal79dev/knowledgebase/tree/main.svg?style=shield)](https://circleci.com/gh/cmittal79dev/knowledgebase/tree/main)
 
 # KnowledgeBase - FREE and Open Source product to create FAQs, knowledge bases, and helpsites for your products or services or businesses
 
@@ -9,7 +9,7 @@
 - Open source and FREE to use
 - Live search on both home and contact pages
 - WYSIWYG editor allowing to embed videos & images, to highlight text in yellow background & in RGB colors, etc.
-- Easily deployable on Heroku, Digitalocean, Linode, etc. [Live Demo on Heroku](https://knowledgebasehub.herokuapp.com/)
+- Easily deployable on Heroku, Digitalocean, Linode, etc. [Live Demo on Heroku](https://knowledgebasedemo.herokuapp.com/)
 - 3 monthly maintenance release and 6 monthly feature release cycles
 
 ## Benefits

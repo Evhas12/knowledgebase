@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Knowledgebasehub</title>
+    <title>
+      <%= yield(:page_title) + ' | ' if content_for?(:page_title) %><%= site_info && (!site_info.brand_name.blank? && !site_info.seo_title.blank?) ? (site_info.brand_name + ' - ' + site_info.seo_title) : 'Knowledge Base Demo - FREE and Open Source FAQ creation app' %>
+    </title>
+    <meta name="description" content="<%= site_info && !site_info.seo_description.blank? ? site_info.seo_description : 'KnowledgeBase is a FREE and Open Source using which you can create a help site or knowledge base or FAQ for your product with data privacy and no costs' %>">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
