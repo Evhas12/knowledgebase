@@ -12,6 +12,7 @@
               <th scope="col">Slug</th>
               <th scope="col">Category</th>
               <th scope="col">Created at</th>
+              <th scope="col">Published</th>
               <th></th>
               <th></th>
             </tr>
@@ -24,6 +25,7 @@
                 <td><%= question.slug %></td>
                 <td><%= link_to question.category.title, category_path(question.category) %></td>
                 <td><%= question.created_at.to_formatted_s(:long_ordinal) %></td>
+                <td><%= question.publish ? 'Yes' : '' %></td>
                 <td><%= link_to "View", question %></td>
                 <td><%= link_to "Edit", edit_question_path(question) %></td>
               </tr>

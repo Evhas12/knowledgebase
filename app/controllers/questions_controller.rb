@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 
   def search
     if params.dig(:topic_search).present?
-      @questions = Question.filter_by_query(params[:topic_search]).order(created_at: :desc)
+      @questions = Question.where(publish: true).filter_by_query(params[:topic_search]).order(created_at: :desc)
     else
       @questions = []
     end
@@ -27,6 +27,9 @@ class QuestionsController < ApplicationController
   # GET /questions/1 or /questions/1.json
   def show
     # render layout: 'home'
+    unless @question.publish
+      redirect_to root_path
+    end
   end
 
   # GET /questions/new
@@ -85,6 +88,6 @@ class QuestionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def question_params
-      params.require(:question).permit(:topic, :slug, :category_id, :answer)
+      params.require(:question).permit(:topic, :slug, :category_id, :answer, :publish)
     end
 end
