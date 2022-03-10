@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  user_id     :integer          not null
+#  publish     :boolean
 #
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
@@ -18,9 +19,11 @@ one:
   slug: topicone
   category: one
   user: one
+  publish: true
 
 two:
   topic: TopicTwo
   slug: topictwo
   category: two
   user: two
+  publish: true

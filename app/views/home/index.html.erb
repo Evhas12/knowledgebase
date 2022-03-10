@@ -19,7 +19,7 @@
                 <div class="col">
                   <h3 class="card-title font-weight-normal mb-2"><%= link_to category.title, category_path(category) %> <span class="text-secondary small">(<%= category.questions.count %>)</span></h3>
                   <ul class="list-group">
-                    <% category.questions.limit(5).each do |question| %>
+                    <% category.questions.where(publish: true).limit(5).each do |question| %>
                       <li class="list-group-item border-light py-1">
                         <%= link_to question.topic, question_path(question), class: "card-link" -%>
                       </li>

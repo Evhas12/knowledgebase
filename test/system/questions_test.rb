@@ -25,6 +25,7 @@ class QuestionsTest < ApplicationSystemTestCase
     fill_in "Topic", with: "Topic Three"
     # find(".trix-content").set("This is the answer to topic three")
     fill_in_rich_text_area "Answer", with: "This is the answer to topic three"
+    check "Publish"
     click_on "Submit"
 
     assert_text "Question was successfully created"

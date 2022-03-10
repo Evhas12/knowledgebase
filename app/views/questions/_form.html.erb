@@ -33,6 +33,11 @@
   </div>
 
   <div>
+    <%= form.label :publish, style: "display: block", class: "form-check-label" %>
+    <%= form.check_box :publish, class: "form-check-input" %>
+  </div>
+
+  <div>
     <%= form.submit 'Submit', class: "btn btn-success mt-4" %>
   </div>
 <% end %>

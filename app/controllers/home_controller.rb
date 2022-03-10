@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   # layout 'home'
   
   def index
-    @categories = Category.includes(:questions).where.not(questions: { category_id: nil })
+    @categories = Category.includes(:questions).where.not(questions: { category_id: nil }).where(questions: { publish: true })
   end
 
   def contact
